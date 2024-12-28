@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Ruslan Mstoi <ruslan.mstoi@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
+aiohttp
+psycopg
+pyyaml

@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2025 Ruslan Mstoi <ruslan.mstoi@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
+# database related variables
+db:
+  # name of table used for site monitor results
+  table_name: "wsmon_results"
+
+  # connection info, parameter to psycopg.AsyncConnection.connect
+  conninfo:
+    dbname: "wsmon"
+    host: "localhost"
+    port: 5432
+    # "user": "user",
+    # "password": "password",
+
+# websites to monitor
+sites:
+  - url: "https://www.brokenwebsitedoesnotexist.com"
+    check_interval: 5
+  - url: "https://www.google.com"
+    check_interval: 10
+    pattern: ".*ogle"
+  - url: "http://python.org"
+    check_interval: 15
+    pattern: "\\d+"
+  - url: "https://www.yahoo.com"
+    check_interval: 30
+    pattern: "zzz"
+  - url: "https://www.github.com"
+    check_interval: 10
+  - url: "https://www.stackoverflow.com"
+    check_interval: 300
+  - url: "https://www.linkedin.com"
+    check_interval: 100
+
+# max time to retry a failing website monitor
+max_retry: 2
