@@ -44,7 +44,7 @@ class WSData(object):
         assert check_interval >= interval_min and \
             check_interval <= interval_max, \
             f"interval set to {check_interval} but should be in range of " \
-            " {interval_min} and {interval_max} seconds)"
+            f" {interval_min} and {interval_max} seconds"
 
         self.url = url
         self.check_interval = check_interval
